@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LeetCode Clone - {{ problem.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            color: #333;
+        }
+
+        .card-subtitle {
+            color: #777;
+        }
+
+        .card-text {
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .solution-container {
+            margin-top: 20px;
+        }
+
+        .solution-container h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .solution-container .form-group {
+            margin-bottom: 20px;
+        }
+
+        .solution-container label {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LeetCode Clone - {{ problem.title }}</h1>
+        <div class="card">
+            <h3>{{ problem.title }}</h3>
+            <h4>Difficulty: {{ problem.difficulty }}</h4>
+            <p>{{ problem.description }}</p>
+        </div>
+        <div class="solution-container">
+            <h3>Solution</h3>
+            <form method="POST" action="/problem/{{ problem.id }}">
+                <div class="form-group">
+                    <label for="solution">Your Solution:</label>
+                    <textarea id="solution" name="solution" rows="5"></textarea>
+                </div>
+                <button type="submit">Submit Solution</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
